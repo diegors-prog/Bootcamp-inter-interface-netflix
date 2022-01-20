@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto:wght@300;400&display=swap');
+
+:root {
+  --vermelho: #E50914;
+  --preto-bg: #141414;
+  --light-color: #AAA;
+  --branco: #ffffff;
+  --font-family-1: 'Roboto';
+  --font-family-2: 'Poppins';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--preto-bg);
+  font-family: var(--font-family-1);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+header .logo {
+  color: var(--vermelho);
+  font-family: var(--font-family-2);
+  font-size: 2.3rem;
+  letter-spacing: .2rem;
+}
+
+header nav a {
+  text-decoration: none;
+  color: var(--light-color);
+  margin-right: .7rem;
+}
+
+header nav a:hover {
+  color: var(--branco);
+}
+
+/* Filme principal*/
+
+.filme-principal {
+  font-size: 1rem;
+  background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)), url('/img/capa-house-of-cards.jpg');
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.filme-principal .container {
+  margin: 0 2rem;
+  width: 70%;
+}
+
+.filme-principal .descricao {
+  margin-bottom: 2.5rem;
+  margin-top: .8rem;
+}
+
+.titulo, p {
+  color: var(--branco);
+}
+
+.titulo {
+  font-size: 3rem;
+}
+
+.botao {
+  background-color: rgba(0,0,0,.50);
+  border: none;
+  color: var(--branco);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-weight: 700;
+}
+
+.botao + .botao {
+  margin-left: 1rem;
+}
+
+.botao:hover {
+  background-color: var(--branco);
+  color: var(--preto-bg);
+}
+
+.botao i {
+  margin-right: .5rem;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carrosel-filmes {
+  margin-top: 1rem;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 700px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .botao {
+    margin-top: 1rem;
+    width: 300px;
+  }
+
+  .botao + .botao {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .descricao {
+    width: 50%;
+  }
+}
